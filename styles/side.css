@@ -1,0 +1,10 @@
+#side {
+  border: 1px solid red;
+  width: 27%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}

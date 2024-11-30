@@ -1,6 +1,16 @@
 body {
   font-family: yekan;
   max-width: 1440px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  direction: rtl;
+}
+#header {
+  height: 150px;
+  background-color: aquamarine;
+}
+#layout {
+  display: flex;
+  max-width: 1440px;
+  flex-flow: row-reverse;
 }

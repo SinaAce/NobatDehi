@@ -1,0 +1,125 @@
+#content {
+  border: 1px solid red;
+  width: 73%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 50px;
+}
+#content #doctorBioBox {
+  margin-top: 10px;
+  width: 83%;
+  padding: 5px;
+  background: #0071dc;
+  border-radius: 8px;
+}
+#content #doctorBioBox #bioTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: 20px auto;
+}
+#content #doctorBioBox #bioTop #infoBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+#content #doctorBioBox #bioTop #infoBox #doctorImg {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  border: #ffffff 1px solid;
+}
+#content #doctorBioBox #bioTop #infoBox #doctorName {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+  color: #ffffff;
+}
+#content #doctorBioBox #bioTop #infoBox #doctorName #name {
+  font-family: yekanbold;
+  font-size: 1.25em;
+}
+#content #doctorBioBox #bioTop #infoBox #doctorName #expert {
+  font-size: 1.1em;
+}
+#content #doctorBioBox #bioTop #rating {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #13bf2c;
+  padding: 5px;
+  border-radius: 8px;
+}
+#content #doctorBioBox #bioTop #rating #rateNumber {
+  font-size: 1.1em;
+}
+#content #doctorBioBox #bioBottom {
+  width: 80%;
+  text-align: justify;
+  margin: 20px auto;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1em;
+}
+#content #doctorBioBox #bioBottom #doctorBiography {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* تعداد خطوط محدود */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  max-height: calc(1.5em * 3); /* سه خط */
+  transition: max-height 0.3s ease;
+}
+#content #doctorBioBox #bioBottom #doctorBiography.expanded {
+  -webkit-line-clamp: unset;
+  max-height: none; /* حذف محدودیت ارتفاع */
+}
+#content #doctorBioBox #bioBottom #doctorBiography.collapsed::after {
+    content: " ...";
+    display: inline;
+    color: #ffffff;
+    background: none; /* حذف بک‌گراند اضافی */
+    padding-left: 0; /* حذف فاصله اضافی */
+    position: static; /* حذف position:absolute */
+}
+
+#content #doctorBioBox #bioBottom #doctorBiography.expanded::after {
+  content: ""; /* حذف سه نقطه در حالت باز */
+}
+#content #doctorBioBox #bioBottom #moreInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0071dc;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: yekanbold;
+}
+#content #doctorBioBox #bioBottom #moreInfo img {
+  margin-right: 5px; /* فاصله بین آیکون و متن */
+  transition: transform 0.3s ease; /* انیمیشن چرخش آیکون */
+}
+
+#content #doctorBioBox #bioBottom #moreInfo.expanded img {
+  transform: rotate(180deg); /* چرخش فلش به بالا در حالت باز */
+}
+#content #selectTime {
+  border: 1px solid red;
+  width: 90%;
+  height: 461px;
+}

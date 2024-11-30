@@ -86,12 +86,12 @@
   max-height: none; /* حذف محدودیت ارتفاع */
 }
 #content #doctorBioBox #bioBottom #doctorBiography.collapsed::after {
-    content: " ...";
-    display: inline;
-    color: #ffffff;
-    background: none; /* حذف بک‌گراند اضافی */
-    padding-left: 0; /* حذف فاصله اضافی */
-    position: static; /* حذف position:absolute */
+  content: " ...";
+  display: inline;
+  color: #ffffff;
+  background: none; /* حذف بک‌گراند اضافی */
+  padding-left: 0; /* حذف فاصله اضافی */
+  position: static; /* حذف position:absolute */
 }
 
 #content #doctorBioBox #bioBottom #doctorBiography.expanded::after {
@@ -120,6 +120,43 @@
 }
 #content #selectTime {
   border: 1px solid red;
-  width: 90%;
+  width: 95%;
   height: 461px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+#content #selectTime #calenderBox {
+  border: 1px solid red;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  flex-flow: column;
+}
+#content #selectTime #calenderBox .titleHolder{
+  font-family: yekanbold;
+  font-size: 1.1em;
+}
+#content #selectTime #calenderBox #monthHolder{
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+}
+#content #selectTime #tips {
+  border: 1px solid red;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  flex-flow: column;
 }

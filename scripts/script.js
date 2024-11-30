@@ -12,15 +12,15 @@ document.getElementById("moreInfo").addEventListener("click", function () {
     bio.classList.remove("collapsed");
     bio.classList.add("expanded");
 
-    // تغییر ارتفاع بیوگرافی به مقدار مناسب برای نمایش کامل محتوا
-    bio.style.maxHeight = bio.scrollHeight + "px"; // تنظیم ارتفاع به ارتفاع واقعی محتوای بیوگرافی
+    // تغییر ارتفاع بیوگرافی برای نمایش کامل محتوای آن
+    bio.style.maxHeight = "none"; // نمایش کامل محتوای بیوگرافی
   } else {
     // اگر بیوگرافی در حالت باز باشد، کلاس "expanded" را حذف و کلاس "collapsed" را اضافه می‌کند
     bio.classList.remove("expanded");
     bio.classList.add("collapsed");
 
-    // مخفی کردن بیوگرافی با کاهش ارتفاع به صفر
-    bio.style.maxHeight = "200px";
+    // تغییر ارتفاع بیوگرافی برای بازگشت به حالت سه خط
+    bio.style.maxHeight = "calc(1.5em * 3)"; // ارتفاع سه خط
   }
 
   // انتخاب المان متن دکمه برای تغییر متن آن

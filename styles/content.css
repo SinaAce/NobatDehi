@@ -80,13 +80,16 @@
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   line-height: 1.5;
+  max-height: calc(1.5em * 3); /* ارتفاع سه خط از متن */
   overflow: hidden; /* پنهان کردن محتوای اضافی */
   transition: max-height 0.5s ease; /* ترنزیشن برای تغییر ارتفاع */
 }
+
 #content #doctorBioBox #bioBottom #doctorBiography.expanded {
-  -webkit-line-clamp: unset;
-  max-height: 1000px; /* محدودیت ارتفاع */
+  -webkit-line-clamp: unset; /* حذف محدودیت تعداد خطوط */
+  max-height: none; /* نمایش کامل محتوای بیوگرافی */
 }
+
 #content #doctorBioBox #bioBottom #doctorBiography.collapsed::after {
   content: " ...";
   display: inline;

@@ -1,46 +1,34 @@
+// اضافه کردن یک رویداد کلیک به دکمه "بیشتر"
 document.getElementById("moreInfo").addEventListener("click", function () {
+  // انتخاب المان بیوگرافی دکتر
   const bio = document.getElementById("doctorBiography");
-  if (bio.classList.contains("collapsed")) {
+
+  // بررسی اینکه آیا باکس بیوگرافی در حالت "collapsed" است یا خیر
+  const isCollapsed = bio.classList.contains("collapsed");
+
+  // تغییر کلاس‌های بیوگرافی برای باز یا بسته کردن آن
+  if (isCollapsed) {
+    // اگر بیوگرافی در حالت بسته باشد، کلاس "collapsed" را حذف و کلاس "expanded" را اضافه می‌کند
     bio.classList.remove("collapsed");
     bio.classList.add("expanded");
-    this.classList.remove("collapsed");
-    this.classList.add("expanded");
-    this.textContent = "کمتر";
-    this.insertAdjacentHTML(
-      "afterbegin",
-      `<svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M1.5 6.5a.5.5 0 0 1 .707 0L8 12.293 13.793 6.5a.5.5 0 0 1 .707.707l-6 6a.5.5 0 0 1-.707 0l-6-6a.5.5 0 0 1 0-.707z"
-          />
-        </svg>`
-    );
+
+    // تغییر ارتفاع بیوگرافی به مقدار مناسب برای نمایش کامل محتوا
+    bio.style.maxHeight = bio.scrollHeight + "px"; // تنظیم ارتفاع به ارتفاع واقعی محتوای بیوگرافی
   } else {
+    // اگر بیوگرافی در حالت باز باشد، کلاس "expanded" را حذف و کلاس "collapsed" را اضافه می‌کند
     bio.classList.remove("expanded");
     bio.classList.add("collapsed");
-    this.classList.remove("expanded");
-    this.classList.add("collapsed");
-    this.textContent = "بیشتر";
-    this.insertAdjacentHTML(
-      "afterbegin",
-      `<svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M1.5 6.5a.5.5 0 0 1 .707 0L8 12.293 13.793 6.5a.5.5 0 0 1 .707.707l-6 6a.5.5 0 0 1-.707 0l-6-6a.5.5 0 0 1 0-.707z"
-          />
-        </svg>`
-    );
+
+    // مخفی کردن بیوگرافی با کاهش ارتفاع به صفر
+    bio.style.maxHeight = "200px";
   }
+
+  // انتخاب المان متن دکمه برای تغییر متن آن
+  const textSpan = this.querySelector("span");
+
+  // تغییر متن دکمه بین "بیشتر" و "کمتر"
+  textSpan.textContent = isCollapsed ? "کمتر" : "بیشتر";
+
+  // تغییر کلاس دکمه برای اعمال استایل چرخش آیکون
+  this.classList.toggle("expanded", isCollapsed);
 });

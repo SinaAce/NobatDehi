@@ -1,3 +1,5 @@
+/* Base Of Page  */
+
 #content {
   border: 1px solid red;
   width: 73%;
@@ -9,6 +11,7 @@
   flex-flow: column;
   gap: 50px;
 }
+/* Dotor Bio */
 #content #doctorBioBox {
   margin-top: 10px;
   width: 83%;
@@ -75,15 +78,14 @@
   display: -webkit-box;
   -webkit-line-clamp: 3; /* تعداد خطوط محدود */
   -webkit-box-orient: vertical;
-  overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5;
-  max-height: calc(1.5em * 3); /* سه خط */
-  transition: max-height 0.3s ease;
+  overflow: hidden; /* پنهان کردن محتوای اضافی */
+  transition: max-height 0.5s ease; /* ترنزیشن برای تغییر ارتفاع */
 }
 #content #doctorBioBox #bioBottom #doctorBiography.expanded {
   -webkit-line-clamp: unset;
-  max-height: none; /* حذف محدودیت ارتفاع */
+  max-height: 1000px; /* محدودیت ارتفاع */
 }
 #content #doctorBioBox #bioBottom #doctorBiography.collapsed::after {
   content: " ...";
@@ -110,14 +112,13 @@
   font-size: 1rem;
   font-family: yekanbold;
 }
-#content #doctorBioBox #bioBottom #moreInfo img {
-  margin-right: 5px; /* فاصله بین آیکون و متن */
+#moreInfo img {
   transition: transform 0.3s ease; /* انیمیشن چرخش آیکون */
 }
-
-#content #doctorBioBox #bioBottom #moreInfo.expanded img {
-  transform: rotate(180deg); /* چرخش فلش به بالا در حالت باز */
+#moreInfo.expanded img {
+  transform: rotate(180deg); /* چرخش ۱۸۰ درجه */
 }
+/* Time Selection Design */
 #content #selectTime {
   border: 1px solid red;
   width: 95%;
@@ -127,7 +128,6 @@
   align-items: center;
   gap: 5px;
 }
-
 #content #selectTime #calenderBox {
   border: 1px solid red;
   width: 50%;
@@ -138,25 +138,77 @@
   gap: 5px;
   flex-flow: column;
 }
-#content #selectTime #calenderBox .titleHolder{
+#content #selectTime #calenderBox .titleHolder {
   font-family: yekanbold;
   font-size: 1.1em;
 }
-#content #selectTime #calenderBox #monthHolder{
+#content #selectTime #calenderBox #monthHolder {
   width: 100%;
   height: 7%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   border: 1px solid red;
 }
+/* Tips & Attentions */
 #content #selectTime #tips {
-  border: 1px solid red;
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 60px;
   flex-flow: column;
+}
+#content #selectTime #tips #attention {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+#content #selectTime #tips #attention img {
+  width: 8%;
+}
+#content #selectTime #tips #attention span {
+  font-family: yekanbold;
+  font-size: 1.1em;
+}
+#content #selectTime #tips span {
+  font-size: 0.9em;
+}
+#content #selectTime #tips #inPersonVisit {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+#content #selectTime #tips #onlineConsultation {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+}
+#content #selectTime #tips button {
+  width: 33%;
+  height: 46px;
+  border: none;
+  background: none;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  font-family: yekan;
+}
+#content #selectTime #tips #btn1:hover {
+  background-color: #0071dc;
+  color: #ffffff;
+}
+#content #selectTime #tips #btn2:hover {
+  background-color: #13bf2c;
+  color: #ffffff;
+}
+#content #selectTime #tips #btn1 {
+  transition: 0.4s;
+  border-color: #0071dc;
+  color: #0071dc;
+}
+#content #selectTime #tips #btn2 {
+  transition: 0.4s;
+  border-color: #13bf2c;
+  color: #13bf2c;
 }

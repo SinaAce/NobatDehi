@@ -1,10 +1,56 @@
 #side {
-  border: 1px solid red;
+  border-left: 2px solid #0071dc;
   width: 27%;
-  height: auto;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  flex-flow: column;
+}
+#side #map {
+  width: 100%;
+  height: 300px;
+}
+#side #map img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+#side .infoBox {
+  margin-top: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#side .infoBox .titleOfInformation {
+  font-family: yekanbold;
+  font-size: 1.1em;
+}
+#side .line {
+  margin-top: 15px;
+  width: 95%;
+  border: 1px solid #0071dc;
+}
+#side .infoBoxCol {
+  margin-top: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  gap: 40px;
+  justify-content: start;
+  flex-flow: column;
+}
+#side .infoBoxCol .titleOfInformation {
+  font-family: yekanbold;
+  font-size: 1.1em;
+}
+#side .infoBoxCol .infoDetail {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
   flex-flow: column;
 }

@@ -13,4 +13,5 @@ body {
   display: flex;
   max-width: 1440px;
   flex-flow: row-reverse;
+  height: 1000px;
 }

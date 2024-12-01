@@ -1,23 +1,22 @@
 /* Base Of Page  */
 
 #content {
-  border: 1px solid red;
   width: 73%;
-  height: auto;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-flow: column;
   gap: 50px;
 }
 /* Dotor Bio */
 #content #doctorBioBox {
-  margin-top: 10px;
+  margin-top: 40px;
   width: 83%;
   padding: 5px;
   background: #0071dc;
   border-radius: 8px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 #content #doctorBioBox #bioTop {
   display: flex;
@@ -37,6 +36,7 @@
   height: 90px;
   border-radius: 100%;
   border: #ffffff 1px solid;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 #content #doctorBioBox #bioTop #infoBox #doctorName {
   display: flex;
@@ -47,6 +47,7 @@
 #content #doctorBioBox #bioTop #infoBox #doctorName #name {
   font-family: yekanbold;
   font-size: 1.25em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 #content #doctorBioBox #bioTop #infoBox #doctorName #expert {
   font-size: 1.1em;
@@ -59,6 +60,7 @@
   background: #13bf2c;
   padding: 5px;
   border-radius: 8px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 #content #doctorBioBox #bioTop #rating #rateNumber {
   font-size: 1.1em;
@@ -76,7 +78,7 @@
 }
 #content #doctorBioBox #bioBottom #doctorBiography {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* تعداد خطوط محدود */
+  line-clamp: 3; /* تعداد خطوط محدود */
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   line-height: 1.5;
@@ -86,7 +88,7 @@
 }
 
 #content #doctorBioBox #bioBottom #doctorBiography.expanded {
-  -webkit-line-clamp: unset; /* حذف محدودیت تعداد خطوط */
+  line-clamp: unset; /* حذف محدودیت تعداد خطوط */
   max-height: none; /* نمایش کامل محتوای بیوگرافی */
 }
 
@@ -123,7 +125,6 @@
 }
 /* Time Selection Design */
 #content #selectTime {
-  border: 1px solid red;
   width: 95%;
   height: 461px;
   display: flex;
@@ -132,7 +133,6 @@
   gap: 5px;
 }
 #content #selectTime #calenderBox {
-  border: 1px solid red;
   width: 50%;
   height: 100%;
   display: flex;
@@ -144,13 +144,12 @@
 #content #selectTime #calenderBox .titleHolder {
   font-family: yekanbold;
   font-size: 1.1em;
-}
-#content #selectTime #calenderBox #monthHolder {
   width: 100%;
   height: 7%;
   display: flex;
   border: 1px solid red;
 }
+
 /* Tips & Attentions */
 #content #selectTime #tips {
   width: 60%;
